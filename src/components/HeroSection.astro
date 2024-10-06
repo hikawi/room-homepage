@@ -1,0 +1,15 @@
+---
+import MenuButton from "./MenuButton";
+import MenuDropdown from "./MenuDropdown";
+import NavBar from "./NavBar.astro";
+import PictureCarousel from "./PictureCarousel";
+---
+
+<section class="w-full">
+  <div class="w-full relative">
+    <PictureCarousel client:load />
+    <MenuDropdown client:load />
+    <MenuButton client:load />
+    <NavBar />
+  </div>
+</section>
