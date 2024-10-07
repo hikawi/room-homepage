@@ -1,5 +1,12 @@
 ---
-import HeroSection from "../components/HeroSection.astro";
+import CarouselButtons from "../components/CarouselButtons";
+import HeroText from "../components/HeroText.astro";
+import NavBar from "../components/NavBar.astro";
+import PictureCarousel from "../components/PictureCarousel";
+
+import { Image } from "astro:assets";
+import aboutDark from "../assets/image-about-dark.jpg";
+import aboutLight from "../assets/image-about-light.jpg";
 ---
 
 <html lang="en">
@@ -20,9 +27,23 @@ import HeroSection from "../components/HeroSection.astro";
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="font-league-spartan text-xs">
-    <main>
-      <HeroSection />
+  <body class="font-league-spartan">
+    <main class="grid grid-flow-row grid-cols-1 min-h-screen h-fit w-full lg:grid-cols-7 lg:[grid-template-rows:5fr_3fr]">
+      <PictureCarousel client:load />
+      <NavBar />
+      <HeroText />
+      <CarouselButtons client:load />
+
+      <Image src={aboutDark} alt="" class="w-full h-full object-cover lg:col-span-2" />
+      <div class="flex flex-col px-8 py-12 gap-4 justify-center lg:col-span-3 lg:text-base xl:px-12 xl:py-16">
+        <h2 class="text-sm font-bold tracking-[0.36rem]">ABOUT OUR FURNITURE</h2>
+        <p class="text-dark-gray font-medium leading-snug tracking-tight">
+          Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive
+          theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary
+          styles or anything in between. Product specialists are available to help you create your dream space.
+        </p>
+      </div>
+      <Image src={aboutLight} alt="" class="w-full h-full object-cover lg:col-span-2" />
     </main>
   </body>
 </html>

@@ -14,13 +14,15 @@ const desktopHero = [desktopHero1, desktopHero2, desktopHero3];
 export default function PictureCarousel() {
   const picture = useStore($picture);
 
+  // I actually have no clue why there needs to be duplicate col-start-1 and row-start-1. Or else everything dies.
+  // I'm guessing it's because the picture is in a grid, and changing the grid display kinda messes with display areas.
   return (
-    <picture class="w-full">
-      <source srcset={mobileHero[picture()].src} media="(max-width: 1280px)" />
+    <picture class="col-start-1 row-start-1 size-full lg:col-span-4 lg:col-start-1 lg:row-start-1">
+      <source srcset={mobileHero[picture()].src} media="(max-width: 1024px)" />
       <img
         src={desktopHero[picture()].src}
         alt="hero"
-        class="w-full object-cover xl:h-full xl:w-fit xl:object-contain"
+        class="size-full object-cover"
       />
     </picture>
   );

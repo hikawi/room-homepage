@@ -7,7 +7,7 @@ export default function MenuButton() {
 
   return (
     <button
-      class="absolute left-6 top-12 z-10 xl:hidden"
+      class="lg:hidden"
       aria-expanded={menuOpen()}
       aria-label={menuOpen() ? "Close Menu" : "Open Menu"}
       onClick={() => $menuOpen.set(!menuOpen())}
