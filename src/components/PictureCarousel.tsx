@@ -10,6 +10,11 @@ import mobileHero3 from "../assets/mobile-image-hero-3.jpg";
 
 const mobileHero = [mobileHero1, mobileHero2, mobileHero3];
 const desktopHero = [desktopHero1, desktopHero2, desktopHero3];
+const alts = [
+  "A white chair with a plant on the table, under fair lighting conditions.",
+  "Three colorful chairs against a beige background, under fair lighting conditions.",
+  "A black office chair-like with the padding on the seat, under darker lighting conditions.",
+];
 
 export default function PictureCarousel() {
   const picture = useStore($picture);
@@ -21,7 +26,7 @@ export default function PictureCarousel() {
       <source srcset={mobileHero[picture()].src} media="(max-width: 1024px)" />
       <img
         src={desktopHero[picture()].src}
-        alt="hero"
+        alt={alts[picture()]}
         class="size-full object-cover"
       />
     </picture>

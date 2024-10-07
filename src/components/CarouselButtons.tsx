@@ -34,7 +34,12 @@ export default function CarouselButtons() {
           aria-label="Previous picture"
         >
           {/* Left arrow */}
-          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="14"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
             <path
               d="M13 0L1 12l12 12"
               stroke="#FFF"
@@ -51,7 +56,12 @@ export default function CarouselButtons() {
           aria-label="Next picture"
         >
           {/* Right arrow */}
-          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="14"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
             <path
               d="M1 0l12 12L1 24"
               stroke="#FFF"

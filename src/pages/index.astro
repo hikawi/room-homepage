@@ -1,6 +1,6 @@
 ---
 import CarouselButtons from "../components/CarouselButtons";
-import HeroText from "../components/HeroText.astro";
+import HeroText from "../components/HeroText";
 import NavBar from "../components/NavBar.astro";
 import PictureCarousel from "../components/PictureCarousel";
 
@@ -31,7 +31,7 @@ import aboutLight from "../assets/image-about-light.jpg";
     <main class="grid grid-flow-row grid-cols-1 min-h-screen h-fit w-full lg:grid-cols-7 lg:[grid-template-rows:5fr_3fr]">
       <PictureCarousel client:load />
       <NavBar />
-      <HeroText />
+      <HeroText client:load />
       <CarouselButtons client:load />
 
       <Image src={aboutDark} alt="" class="w-full h-full object-cover lg:col-span-2" />
