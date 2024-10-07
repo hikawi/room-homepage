@@ -26,7 +26,7 @@ export default function CarouselButtons() {
 
   return (
     <>
-      <div class="z-10 col-start-1 row-start-1 flex h-14 w-[7rem] shrink-0 flex-row place-self-end bg-black lg:col-start-5 lg:place-self-start lg:self-end xl:h-20 xl:w-40">
+      <div class="col-start-1 row-start-1 flex h-14 w-[7rem] shrink-0 flex-row place-self-end bg-black lg:col-start-5 lg:w-full lg:place-self-start lg:self-end xl:h-20">
         <button
           class="flex w-full items-center justify-center enabled:hover:bg-very-dark-gray disabled:cursor-not-allowed disabled:opacity-50"
           disabled={picture() === 0}

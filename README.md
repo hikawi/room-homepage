@@ -1,47 +1,65 @@
-# Astro Starter Kit: Minimal
+# Frontend Mentor - Room homepage solution
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Table of contents
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Frontend Mentor - Room homepage solution](#frontend-mentor---room-homepage-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
 
-## 🚀 Project Structure
+## Overview
 
-Inside of your Astro project, you'll see the following folders and files:
+### The challenge
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Users should be able to:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate the slider using either their mouse/trackpad or keyboard
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Screenshot
 
-Any static assets, like images, can be placed in the `public/` directory.
+<details>
 
-## 🧞 Commands
+<summary>Desktop</summary>
 
-All commands are run from the root of the project, from a terminal:
+![Desktop](./screenshot-desktop.jpeg)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+</details>
 
-## 👀 Want to learn more?
+<details>
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+<summary>Mobile</summary>
+
+![Mobile](./screenshot-mobile.jpeg)
+
+</details>
+
+### Links
+
+- [Live Site URL](https://room-homepage.frilly.dev/)
+
+## My process
+
+### Built with
+
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [SolidJS](https://www.solidjs.com/)
+- [Nanostores](https://github.com/nanostores/)
+
+### What I learned
+
+I learned that grid elements overlap each other willingly, as long as you specify the area it's supposed to take. I think this works really well for the design layout provided. For example, the arrow buttons should line up with the text box below, and using flexbox wouldn't be possible? I think it is possible with a lot of calculations and moving via translations, but it's definitely much messier than applying a grid layout.
+
+### Continued development
+
+I had some trouble with the styling of the CSS grid, and I should have finished this faster as the only difficult thing was realizing it should be one whole grid, instead of 2 flexboxes on each row.
